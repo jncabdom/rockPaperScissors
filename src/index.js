@@ -4,7 +4,7 @@ const playerOptions = [
     winsAgainst: ["scissors", "lizard"],
     index: 0
   },
-    {
+  {
     name: "paper",
     winsAgainst: ["rock", "spock"],
     index: 1
@@ -24,7 +24,7 @@ const playerOptions = [
     winsAgainst: ["rock", "scissors"],
     index: 4
   },
-]
+];
 
 let playerSelection;
 let cpuSelection;
@@ -68,7 +68,7 @@ const createNewOption = (optionName) => {
     `<div class="option ${optionName}-option">
        <img class="option-image" src="./${optionName}.png">
        <button class="option-button ${optionName}-button">Select ${optionName}</button>
-     </div>`
+     </div>`;
 }
 
 const updateWinnerText = (player, draw) => {
@@ -80,7 +80,8 @@ const updateWinnerText = (player, draw) => {
 const updateCpuText = (selection) =>
   cpuText.innerHTML = `Cpu Selection: ${selection.charAt(0).toUpperCase() + selection.slice(1)}`;
   
-
+// ---- BEGINNING OF THE GAME --- //
+  
 playerOptions.forEach(option => {
   createNewOption(option.name);
 });
