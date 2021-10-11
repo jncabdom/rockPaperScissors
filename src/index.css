@@ -11,8 +11,10 @@ body {
 }
 
 .option-image {
-  width: 12rem;
+  width: 15rem;
 }
+
+h2 { margin: 0 0 1rem 0; }
 
 .option-button {
   margin-top: 0.5rem;
@@ -93,6 +95,7 @@ body {
 
 h1 {
   font-size: 5rem;
+  margin-bottom: 1rem;
 }
 
 .rpsHolder {
@@ -112,11 +115,13 @@ h1 {
   flex-wrap: wrap;
   border: 0.2rem solid black;
   border-radius: 15px;
-  padding: 2rem;
+  padding-bottom: 1rem;
 }
 
 .option {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 1rem 2rem 1rem 2rem;
 }
