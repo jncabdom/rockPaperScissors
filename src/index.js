@@ -48,11 +48,6 @@ const getRandomOption = () =>
 const getRandomNumber = (max) =>
   Math.floor(Math.random() * max);
 
-const beginGame = () => {
-  cpuSelection = getRandomOption();
-  updateCpuText(cpuSelection.name);
-}
-
 const checkWinCondition = () => {
   if (playerSelection.winsAgainst.includes(cpuSelection.name)) {
     updateWinnerText("Player", 0);
@@ -79,8 +74,13 @@ const updateWinnerText = (player, draw) => {
 
 const updateCpuText = (selection) =>
   cpuText.innerHTML = `Cpu Selection: ${selection.charAt(0).toUpperCase() + selection.slice(1)}`;
-  
-// ---- BEGINNING OF THE GAME --- //
+
+const beginGame = () => {
+  cpuSelection = getRandomOption();
+  updateCpuText(cpuSelection.name);
+}
+
+// ---- GAME START --- //
   
 playerOptions.forEach(option => {
   createNewOption(option.name);
